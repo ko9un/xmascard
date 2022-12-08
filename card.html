@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>잘가 2022년..Good Bye !!</title>
+    <link
+      rel="shortcut icon"
+      href="https://e7.pngegg.com/pngimages/651/42/png-clipart-computer-icons-heart-favicon-love-symbols-love-color-pencil.png"/>
+    <meta
+      property="og:image"
+      content="https://www.kindpng.com/picc/m/5-50664_happy-new-year-clipart-colourful-happy-new-year.png"/>
+    <meta property="og:title" content="다들 보시오" />
+    <meta property="og:description" content="Good Bye 2022" />
+
+    <link rel="stylesheet" href="card.css" />
+  </head>
+
+  <body>
+    <div class="letter-close">
+      <div class="envelope"></div>
+      <h2 class="envelope-msg">봉투를 열어봐!</h2>
+    </div>
+
+    <div class="letter-open">
+      <div class="rtan" onclick="go_rtan()"></div>
+      <h2>2022년 수고 많았어!</h2>
+      <div class="messagebox">
+        ㅋㄱㄴㅇㅁㄹㄴㄹㅇㅁㄴㅇㅁㄹㄹㄴㅇㅁ<br />
+        <p class="from">from 태우</p>
+      </div>
+    </div>
+
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    <script>
+      const letterClose = document.querySelector('.letter-close');
+      const letterOpen = document.querySelector('.letter-open');
+
+      letterClose.onclick = () => {
+        letterClose.style.display = 'none';
+        letterOpen.style.display = 'block';
+      };
+
+      function go_rtan() {
+        alert('앗 어떻게 찾았지!');
+        window.location.href =
+          'https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/iDz/image/y3pFBIgnTW_lWufDwO3dPRR78W4.jpg';
+      }
+    </script>
+  </body>
+</html>
