@@ -6,11 +6,13 @@
     <title>잘가 2022년..Good Bye !!</title>
     <link
       rel="shortcut icon"
-      href="https://e7.pngegg.com/pngimages/651/42/png-clipart-computer-icons-heart-favicon-love-symbols-love-color-pencil.png"/>
+      href="https://e7.pngegg.com/pngimages/651/42/png-clipart-computer-icons-heart-favicon-love-symbols-love-color-pencil.png"
+    />
     <meta
       property="og:image"
-      content="https://www.kindpng.com/picc/m/5-50664_happy-new-year-clipart-colourful-happy-new-year.png"/>
-    <meta property="og:title" content="다들 보시오" />
+      content="https://www.kindpng.com/picc/m/5-50664_happy-new-year-clipart-colourful-happy-new-year.png"
+    />
+    <meta property="og:title" content="히선아" />
     <meta property="og:description" content="Good Bye 2022" />
 
     <link rel="stylesheet" href="card.css" />
@@ -27,25 +29,52 @@
       <h2>2022년 수고 많았어!</h2>
       <div class="messagebox">
         히선아 요번년도 따듯하게 보내는구나<br />
-        내년에도 잘 지내보자구나 
+        내년에도 잘 지내 보자구나
         <p class="from">from 태우</p>
       </div>
     </div>
+    <audio
+      id="player"
+      src="https://cdn.pixabay.com/download/audio/2022/11/26/audio_0b5896798f.mp3?filename=christmas-logo-127143.mp3"
+    ></audio>
 
     <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
     <script>
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+      function sample(array) {
+        let index = random(array.length - 1);
+        return array[index];
+      }
+      const rtan = document.querySelector('.rtan');
+      const images = [
+        'https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/rtan.gif',
+        'https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/Webp.net-gifmaker.gif',
+        'https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/Webp.net-gifmaker+(1).gif',
+        'https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/Webp.net-gifmaker+(2).gif',
+      ];
+      rtan.style.backgroundImage = `url("${sample(images)}")`;
+
       const letterClose = document.querySelector('.letter-close');
       const letterOpen = document.querySelector('.letter-open');
 
       letterClose.onclick = () => {
+        document.getElementById(`player`).play();
         letterClose.style.display = 'none';
         letterOpen.style.display = 'block';
       };
 
+      const links = [
+        'https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/iDz/image/y3pFBIgnTW_lWufDwO3dPRR78W4.jpg',
+        'https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/iDz/image/_7kdJCI3Ctvc7y5uqad7MWG0jPA.jpeg',
+        'https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/iDz/image/LidccaKduXQf7QuhFLi9vFUDht0.jpg',
+        'https://t1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/iDz/image/azVJBP6pZYX4bMMt3yIMDHMvl6A.jpg',
+      ];
+
       function go_rtan() {
         alert('앗 어떻게 찾았지!');
-        window.location.href =
-          'https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/iDz/image/y3pFBIgnTW_lWufDwO3dPRR78W4.jpg';
+        window.location.href = sample(links);
       }
     </script>
   </body>
